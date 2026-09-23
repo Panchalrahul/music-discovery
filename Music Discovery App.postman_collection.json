@@ -1,0 +1,179 @@
+{
+  "info": {
+    "_postman_id": "83b996c5-5caa-42f7-89ae-08b115ede293",
+    "name": "Music Discovery App",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27523527",
+    "_collection_link": "https://go.postman.co/collection/27523527-83b996c5-5caa-42f7-89ae-08b115ede293?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Rahul Postman\",\r\n    \"email\": \"rahulpostman@test.com\",\r\n    \"genres\": [\"pop\", \"rock\"],\r\n    \"artists\": [\"The Weeknd\"],\r\n    \"moods\": [\"happy\", \"energetic\"]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost/users/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "users",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get User",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/users/2/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "users",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Refresh Recommendations",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/recommendations/2/refresh/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "recommendations",
+            "2",
+            "refresh",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Recommendations",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/recommendations/2/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "recommendations",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Activity",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"user\": 2,\r\n    \"spotify_track_id\": \"dummy001\",\r\n    \"track_name\": \"Blinding Lights\",\r\n    \"artist_name\": \"The Weeknd\",\r\n    \"action\": \"play\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost/activity/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "activity",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Analytics Summary",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/analytics/summary/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "analytics",
+            "summary",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Analytics Trends",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/analytics/trends/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "analytics",
+            "trends",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Analytics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ]
+}
